@@ -10,16 +10,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CurryMonsters"
+        android:theme="@style/AppTheme"
         tools:targetApi="31">
+
         <activity
             android:name=".MenuActivity"
             android:exported="false" />
         <activity
-            android:name=".LogoActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat">
+            android:name=".MakingNameActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

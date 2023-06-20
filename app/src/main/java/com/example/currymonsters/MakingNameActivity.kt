@@ -30,11 +30,12 @@ class MakingNameActivity : AppCompatActivity() {
 
                 myserver.postTest("users").enqueue(object : Callback<TestInfo>{
                     override fun onFailure(call: Call<TestInfo>?, t: Throwable?) {
-                        Log.e("retrofit", t.toString())
+                        Log.e("retrofit T.T", t.toString())
                     }
 
                     override fun onResponse(call: Call<TestInfo>?, response: Response<TestInfo>?) {
-                        Log.d("retrofit", response?.body().toString())
+                        Log.d("retrofit~!", response?.body().toString())
+                        //name=11이라는 답변이 온다... 왜일까? 이게뭘까?
                     }
                 })
             }

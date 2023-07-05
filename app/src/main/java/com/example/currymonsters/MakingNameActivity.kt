@@ -22,13 +22,13 @@ class MakingNameActivity : AppCompatActivity() {
         btn.setOnClickListener {
             if (inputText.text.toString().length!=0){ //공백이 아닐 때만
                 val retrofit = Retrofit.Builder()
-                    .baseUrl("https://jsonplaceholder.typicode.com/")
+                    .baseUrl("https://33f2cc90-164b-4a35-8311-43dc926fb676.mock.pstmn.io/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
 
                 val myserver: ApiService = retrofit.create(ApiService::class.java)
 
-                myserver.postTest("users").enqueue(object : Callback<TestInfo>{
+                myserver.postTest("200","amy").enqueue(object : Callback<TestInfo>{
                     override fun onFailure(call: Call<TestInfo>?, t: Throwable?) {
                         Log.e("retrofit T.T", t.toString())
                     }

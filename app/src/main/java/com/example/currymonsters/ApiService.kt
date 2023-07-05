@@ -7,8 +7,9 @@ import retrofit2.http.POST
 
 interface ApiService {
     @FormUrlEncoded
-    @POST("users")
+    @POST("testapi/first")
     fun postTest(
-        @Field("users") users: String
+        @Field("age") age: String,
+        @Field("name") name: String
     ): Call<TestInfo>
 }
